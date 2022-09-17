@@ -16,4 +16,20 @@ def gallery(request):
 
 
 def volunteers(request):
-    return render(request, 'volunteers.html')
+    data = models.Volunteer.objects.all()
+    return render(request, 'volunteers.html', {'vulData': data})
+
+
+def volunteer_profile(request, id):
+    data = models.Volunteer.objects.filter(id=id)
+    return render(request, 'volunteer-profile.html', {'vulProfile': data})
+
+
+def projects(request):
+    data = models.Project.objects.all()
+    return render(request, 'projects.html', {'proData': data})
+
+
+def project_detail(request, id):
+    data = models.Project.objects.filter(id=id)
+    return render(request, 'project-details.html', {'proDetails': data})
