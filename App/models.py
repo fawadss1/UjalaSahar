@@ -38,3 +38,15 @@ class Project(models.Model):
 
     def __str__(self):
         return str(self.Title)
+
+
+class Contact(models.Model):
+    Name = models.CharField(max_length=50, blank=False)
+    Email = models.EmailField(blank=False)
+    Phone = models.CharField(max_length=15, blank=False)
+    Message = models.TextField(max_length=255)
+    Date = models.DateField(auto_now=False)
+    Time = models.CharField(max_length=25, blank=False)
+
+    def __str__(self):
+        return str(self.Name)

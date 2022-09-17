@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from django.contrib import messages
 from . import models
+import datetime as T
+
+x = T.datetime.now()
+todayDate = x.strftime('%Y-%m-%d')
+timeNow = x.strftime('%I:%M:%S %p')
 
 
 def home(request):
@@ -36,3 +42,14 @@ def projects(request):
 def project_detail(request, id):
     data = models.Project.objects.filter(id=id)
     return render(request, 'project-details.html', {'proDetails': data})
+
+
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name').title()
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message').title()
+        models.Contact(Name=name, Email=email, Phone=phone, Message=message, Date=todayDate, Time=timeNow).save()
+        messages.success(request, "Your Message Has Been Sended Successfully")
+    return render(request, 'contact.html')

@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="single-header-info">
-                <a class="thm-btn" href="{% url 'donations' %}">Donate Now</a>
+                <a class="thm-btn" href="{% url 'donation' %}">Donate Now</a>
             </div>
         </div>
     </div>
@@ -51,13 +51,13 @@
             <div class="nav-header">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="events-grid.html">Events</a></li>
-                    <li><a href="{% url 'projects' %}">Projects</a></li>
-                    <li><a href="{% url 'volunteers' %}">Volunteers</a></li>
+                    <li><a href="events-grid.html">Our Events</a></li>
+                    <li><a href="{% url 'projects' %}">Our Projects</a></li>
+                    <li><a href="{% url 'volunteers' %}">Our Volunteers</a></li>
                     <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                    <li><a href="{% url 'donations' %}">Donation</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="{% url 'donation' %}">Donation</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
             </div>
             <div class="nav-footer">
@@ -74,7 +74,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-6">
                 <div class="footer-widget about-widget">
-                    <a href="#">
+                    <a href="/">
                         <img src="{% static 'img/resources/footer-logo.png' %}" alt="Footer Logo"/>
                     </a>
                     <p>Lorem ipsum dolor sit amet, eu me evert laboramus, iudico </p>
@@ -84,7 +84,8 @@
                         <li><i class="fa fa-envelope-o"></i> <span>uso1993@yahoo.com</span></li>
                     </ul>
                     <ul class="social">
-                        <li><a href="https://www.fb.com/ujalasaharorg" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.fb.com/ujalasaharorg" target="_blank"><i
+                                class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-youtube"></i></a></li>
@@ -134,15 +135,16 @@
 
 <section class="footer-bottom">
     <div class="container text-center">
-        <p>&copy; <span id="year"></span> Ujala Sahar. All Rights Reserved. Developed By <a href="https://fb.com/fawadkhan546"
-                                                                         target="_blank">Fawad.</a>
+        <p>&copy; <span id="year"></span> Ujala Sahar. All Rights Reserved. Developed By <a
+                href="https://fb.com/fawadkhan546"
+                target="_blank">Fawad.</a>
         </p>
     </div>
 </section>
 
 <script>
-const d = new Date();
-document.getElementById("year").innerHTML = d.getFullYear();
+    const d = new Date();
+    document.getElementById("year").innerHTML = d.getFullYear();
 </script>
 
 <!-- main jQuery -->
