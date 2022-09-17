@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Gallery{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>Gallery</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>Gallery</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery-section p_0">
+        <div class="clearfix">
+            {% for i in Photos %}
+                <div class="image-box">
+                    <div class="inner-box">
+                        <figure class="image"><a href="{% static 'Media/Images' %}/{{ i.Image }}"  class="lightbox-image">
+                            <img src="{% static 'Media/Images' %}/{{ i.Image }}" alt=""></a></figure>
+                        <a href="{% static 'Media/Images' %}/{{ i.Image }}" class="lightbox-image btn-zoom"
+                           title="{{ i.Image_Title}}"><span class="icon fa fa-dot-circle-o"></span></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="p_40" data-bg-color="#eee">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="clients-carousel owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="img-box">
+                                <img src="{% static 'img/clients/logo-6.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img src="{% static 'img/clients/logo-6.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img src="{% static 'img/clients/logo-6.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img src="{% static 'img/clients/logo-6.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img src="{% static 'img/clients/logo-6.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

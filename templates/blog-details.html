@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Charity Home || Charity and Donation HTML5 Template</title>
+
+	<!-- responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- master stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- responsive stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+
+
+
+</head>
+<body>
+
+
+	<section class="top-bar">
+		<div class="container">
+
+			<div class="left-text pull-left">
+				<p><span>Support Us :</span> companyname@mail.com</p>
+			</div> <!-- /.left-text -->
+
+			<div class="social-icons pull-right">
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+				</ul>
+			</div> <!-- /.social-icons -->
+		</div>
+	</section> <!-- /.top-bar -->
+
+	<header class="header">
+		<div class="container">
+			<div class="logo pull-left">
+				<a href="index.html">
+					<img src="img/resources/logo.png" alt="Awesome Image"/>
+				</a>
+			</div>
+			<div class="header-right-info pull-right clearfix">
+				<div class="single-header-info">
+					<div class="icon-box">
+						<div class="inner-box">
+							<i class="flaticon-interface-2"></i>
+						</div>
+					</div>
+					<div class="content">
+						<h3>EMAIL</h3>
+						<p>companyname@mail.com</p>
+					</div>
+				</div>
+				<div class="single-header-info">
+					<div class="icon-box">
+						<div class="inner-box">
+							<i class="flaticon-telephone"></i>
+						</div>
+					</div>
+					<div class="content">
+						<h3>Call Now</h3>
+						<p><b>(732) 803-010-03</b></p>
+					</div>
+				</div>
+				<div class="single-header-info">
+	                <!-- Modal: donate now Starts -->
+	                <a class="thm-btn" data-toggle="modal" href="#modal-donate-now">Donate Now</a>
+	                <div class="modal fade" id="modal-donate-now" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	                  <div class="modal-dialog style-one" role="document">
+	                    <div class="modal-content">
+	                      <div class="modal-header">
+	                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                        <h4 class="modal-title" id="myModalLabel">Make a Donation</h4>
+	                      </div>
+	                      <div class="modal-body">
+		                    <div class="donation-form-outer">
+				            	<form action="contact.html" method="post">
+				                	
+				                    <!--Form Portlet-->
+				                    <div class="form-portlet">
+				                    	<h3>Donation Amount</h3>
+				                        
+				                        <div class="row clearfix">
+				                        	<div class="form-group col-xs-12 clearfix">
+				                            	
+				                                <div class="radio-select">
+				                                	<input type="radio" id="amount-1" name="sel-amount">
+				                                    <label for="amount-1">$10</label>
+				                                </div>
+				                                
+				                                <div class="radio-select">
+				                                	<input type="radio" checked="" id="amount-2" name="sel-amount">
+				                                    <label for="amount-2">$25</label>
+				                                </div>
+				                                
+				                                <div class="radio-select">
+				                                	<input type="radio" id="amount-3" name="sel-amount">
+				                                    <label for="amount-3">$50</label>
+				                                </div>
+				                                
+				                                <div class="radio-select">
+				                                	<input type="radio" id="amount-4" name="sel-amount">
+				                                    <label for="amount-4">$100</label>
+				                                </div>
+				                                
+				                                <div class="radio-select">
+				                                	<input type="radio" id="amount-5" name="sel-amount">
+				                                    <label for="amount-5">$150</label>
+				                                </div>
+				                                
+				                                <div class="radio-select">
+				                                	<input type="radio" id="amount-6" name="sel-amount">
+				                                    <label for="amount-6">$200</label>
+				                                </div>
+				                                
+				                                <div class="radio-select">
+				                                	OR
+				                                </div>
+				                                
+				                            </div>
+				                            
+				                            <div class="form-group  col-xs-12 padd-top-20">
+				                            	
+				                                <input type="text" placeholder="Other Amount" value="" name="other-amount">
+				                                
+				                            </div>
+				                            
+				                        </div>
+				                    </div>
+				                    
+				                    <hr>
+				                    
+				                    <!--Form Portlet-->
+				                    <div class="form-portlet">
+				                    	<h3>Billing Information</h3>
+				                        
+				                        <div class="row clearfix">
+				                            
+				                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+				                            	<div class="field-label">Card Number <span class="required">*</span></div>
+				                                <input type="text" required="" placeholder="Card Number" value="" name="name">
+				                            </div>
+				                            
+				                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+				                            	<div class="field-label">Security Code (CVC) <span class="required">*</span></div>
+				                                <input type="text" required="" placeholder="Security Code" value="" name="name">
+				                            </div>
+				                            
+				                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+				                            	<div class="field-label">Name <span class="required">*</span></div>
+				                                <input type="text" required="" placeholder="First Name" value="" name="name">
+				                            </div>
+				                            
+				                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+				                            	<div class="field-label">Email <span class="required">*</span></div>
+				                                <input type="email" required="" placeholder="Email" value="" name="name">
+				                            </div>
+				                            
+				                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+				                            	<div class="field-label">Phone <span class="required">*</span></div>
+				                                <input type="text" required="" placeholder="Phone" value="" name="name">
+				                            </div>
+				                            
+				                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+				                            	<div class="field-label">Address <span class="required">*</span></div>
+				                                <input type="text" required="" placeholder="Address 1" value="" name="name">
+				                            </div>
+				                            
+				                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+				                            	<div class="field-label">City <span class="required">*</span></div>
+				                                <select>
+				                                	<option>City</option>
+				                                    <option>City Name</option>
+				                                    <option>City Other</option>
+				                                </select>
+				                            </div>
+				                            
+				                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+				                            	<div class="field-label">Zip / Postal Code <span class="required">*</span></div>
+				                                <input type="text" required="" placeholder="Zip Code" value="" name="name">
+				                            </div>
+				                    
+						                    <hr>
+						                    
+						                    <div class="text-center"><button class="thm-btn mt_30 mb_30" type="submit">Donate Now</button></div>
+				                            
+				                        </div>
+				                    </div>
+				                    
+				                    <hr>
+				                    
+				                    <!--Form Portlet-->
+				                    <div class="form-portlet">
+				                    	<h3>Online Payment Information</h3>
+				                        
+				                        <div class="payment-option-logo"><img alt="" src="img/resources/payment-logos.png" class="img-responsive"></div>
+				                        <br>
+				                    </div>
+				                    
+				                </form>
+				            </div>
+	                      </div>
+	                    </div>
+	                  </div>
+	                </div>
+	                <!-- Modal: donate now Ends -->
+				</div>
+			</div>
+		</div>
+	</header> <!-- /.header -->
+
+
+	<nav class="mainmenu-area stricky">
+		<div class="container">
+			<div class="navigation pull-left">
+				<div class="nav-header">
+					<ul>
+						<li class="dropdown">
+							<a href="#">Home</a>
+							<ul class="submenu">
+								<li><a href="index.html">Home One</a></li>
+								<li><a href="index2.html">Home Two</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">About</a></li>						
+						<li class="dropdown">
+							<a href="#">Causes</a>
+							<ul class="submenu">
+								<li><a href="causes-grid.html">Causes Grid</a></li>
+								<li><a href="causes-list.html">Causes List</a></li>
+								<li><a href="causes-single.html">Single Cause</a></li>
+							</ul>
+						</li>						
+						<li class="dropdown">
+							<a href="#">Events</a>
+							<ul class="submenu">
+								<li><a href="events-grid.html">Events Grid</a></li>
+								<li><a href="events-list.html">Events List</a></li>
+								<li><a href="events-single.html">Event Single</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Volunteer</a>
+							<ul class="submenu">
+								<li><a href="volunteer-style-one.html">Volunteer Style One</a></li>
+								<li><a href="volunteer-style-two.html">Volunteer Style Two</a></li>
+								<li><a href="volunteer-profile.html">Volunteer Profile</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Gallery</a>
+							<ul class="submenu">
+								<li><a href="gallery-style-one.html">Gallery Style One</a></li>
+								<li><a href="gallery-style-two.html">Gallery Style Two</a></li>
+								<li><a href="gallery-style-three.html">Gallery Style Three</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Pages</a>
+							<ul class="submenu">
+								<li><a href="donations.html">Donation</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Blog</a>
+							<ul class="submenu">
+								<li><a href="blog-style-one.html">Blog Style One</a></li>
+								<li><a href="blog-style-two.html">Blog Style Two</a></li>
+								<li><a href="blog-details.html">Blog Details</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="nav-footer">
+					<button><i class="fa fa-bars"></i></button>
+				</div>
+			</div>
+			<div class="search-box pull-right">
+				<form action="#">
+					<input type="text" placeholder="Search...">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+		</div>
+	</nav> <!-- /.mainmenu-area -->
+
+	
+	<section class="inner-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 sec-title colored text-center">
+					<h2>Blog</h2>
+					<ul class="breadcumb">
+						<li><a href="index.html">Home</a></li>
+						<li><i class="fa fa-angle-right"></i></li>
+						<li><span>Blog</span></li>
+					</ul>
+					<span class="decor"><span class="inner"></span></span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="blog-home sec-padding blog-page blog-details">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 pull-left">
+					<div class="single-blog-post">
+						<div class="img-box">
+							<img src="img/blog-page/2.jpg" alt="">
+						</div>
+						<div class="content-box">
+							<div class="date-box">
+								<div class="inner">
+									<div class="date">
+										<b>24</b>
+										apr
+									</div>
+									<div class="comment">
+										<i class="flaticon-interface-1"></i> 8
+									</div>
+								</div>
+							</div>
+							<div class="content">
+								<a href="#"><h3>Lates blog post with image</h3></a>
+								<p>Lorem ipsum dolor sit amet, his ea unum ponderum, detracto ponderum an vim. Equidem evertitur vel ea, has ad inermis principes. Mentitum appareat conceptam id quo. Vis evertitur referrentur ad, no laoreet consetetur reformidans pro, sit habeo omnes eu. </p> <br>
+								<p> Iisque quaeque propriae has no. Modo blandit tincidunt ne eos, diam periculis disputationi usu cu. Ea eos suscipit expetendis. Vix ea quot modus, id novum vocibus pro. Nec autem ullum albucius no, vel ne tritani omnesque omittantur. Pro fierent hendrerit assueverit et, per quod luptatum comprehensam in.</p> <br>
+								<p> No consulatu comprehensam nam. Ferri dolore sententiae te eum, nibh dictas definitiones mea ei. Nec cu augue dicunt, est id verear labitur necessitatibus. Salutandi quaerendum ex nec.</p> <br>
+								<p> Cu quo audire apeirian. Dolore necessitatibus sea id, nihil mandamus an ius, per recusabo interesset reprehendunt ea. In vix autem vituperatoribus, mei sint ipsum dolorem ex, quodsi vitupera</p>
+								<div class="bottom-box clearfix">
+									<span class="pull-left">Tag: <a href="#">child, charity</a></span>
+									<ul class="pull-right share">
+										<li><span>Share: </span></li>
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="admin-info">
+						<div class="img-box">
+							<div class="inner-box">
+								<img src="img/blog-page/admin.jpg" alt="Awesome Image"/>
+							</div>
+						</div>
+						<div class="content">
+							<h3>Rashed kabir</h3>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+							<ul class="social">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="comment-box">
+						<div class="title">
+							<h2>2 Comments</h2>
+						</div>
+						<div class="single-comment-box">
+							<div class="img-box">
+								<div class="inner-box">
+									<img src="img/blog-page/comment1.jpg" alt="">
+								</div>
+							</div>
+							<div class="content-box">
+								<h3>Jhon Chena</h3>
+								<div class="meta-box clearfix">
+									<span class="pull-left">24 Feb, 2015 at 2:40pm</span>
+									<a href="#" class="reply pull-right">Reply</a>
+								</div>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lore Ipsum has been the eloi industry's standard dummy text ever since the 1500s,</p>
+								
+							</div>
+						</div>
+						<div class="single-comment-box">
+							<div class="img-box">
+								<div class="inner-box">
+									<img src="img/blog-page/comment1.jpg" alt="">
+								</div>
+							</div>
+							<div class="content-box">
+								<h3>Jhon Chena</h3>
+								<div class="meta-box clearfix">
+									<span class="pull-left">24 Feb, 2015 at 2:40pm</span>
+									<a href="#" class="reply pull-right">Reply</a>
+								</div>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lore Ipsum has been the eloi industry's standard dummy text ever since the 1500s,</p>
+								
+							</div>
+						</div>
+						<div class="single-comment-box">
+							<div class="img-box">
+								<div class="inner-box">
+									<img src="img/blog-page/comment1.jpg" alt="">
+								</div>
+							</div>
+							<div class="content-box">
+								<h3>Jhon Chena</h3>
+								<div class="meta-box clearfix">
+									<span class="pull-left">24 Feb, 2015 at 2:40pm</span>
+									<a href="#" class="reply pull-right">Reply</a>
+								</div>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lore Ipsum has been the eloi industry's standard dummy text ever since the 1500s,</p>
+								
+							</div>
+						</div>
+						<div class="single-comment-box">
+							<div class="img-box">
+								<div class="inner-box">
+									<img src="img/blog-page/comment1.jpg" alt="">
+								</div>
+							</div>
+							<div class="content-box">
+								<h3>Jhon Chena</h3>
+								<div class="meta-box clearfix">
+									<span class="pull-left">24 Feb, 2015 at 2:40pm</span>
+									<a href="#" class="reply pull-right">Reply</a>
+								</div>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lore Ipsum has been the eloi industry's standard dummy text ever since the 1500s,</p>
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="comment-form contact-content">
+						<h2>Leave a Comment</h2>
+						<form action="inc/sendemail.php" class="contact-form row" id="contact-page-contact-form">
+							<div class="col-md-6">
+								<input type="text" name="name" placeholder="Name">
+								<input type="text" name="email" placeholder="Email">
+								<input type="text" name="phone" placeholder="Phone">
+								<button class="thm-btn" type="submit">Send</button>
+							</div>
+							<div class="col-md-6">
+								<textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
+							</div>
+						</form>
+					</div>
+
+				</div>
+				<div class="col-md-4 pull-right">
+					<div class="side-bar-widget">
+						<div class="single-sidebar-widget search">
+							<form action="#">
+								<input type="text" placeholder="Search">
+								<button type="submit"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+						<div class="single-sidebar-widget category">
+							<h3 class="title">Catagories</h3>
+							<ul>
+								<li><a href="#">Child</a></li>
+								<li><a href="#">Charity</a></li>
+								<li><a href="#">Sponsorship</a></li>
+								<li><a href="#">Volunteers</a></li>
+								<li><a href="#">Feed</a></li>
+							</ul>
+						</div>
+						<div class="single-sidebar-widget popular-post">
+							<h3 class="title">Popular Posts</h3>
+							<ul>
+								<li>
+									<div class="img-box">
+										<div class="inner-box">
+											<img src="img/blog-page/s1.jpg" alt="">
+										</div>
+									</div>
+									<div class="content-box">
+										<a href="#"><h4>Lorem Ipsum is simply dumm textand somthing more here</h4></a>
+										<span>17 jun, 2015</span>
+									</div>
+								</li>
+								<li>
+									<div class="img-box">
+										<div class="inner-box">
+											<img src="img/blog-page/s2.jpg" alt="">
+										</div>
+									</div>
+									<div class="content-box">
+										<a href="#"><h4>Lorem Ipsum is simply dumm textand somthing more here</h4></a>
+										<span>17 jun, 2015</span>
+									</div>
+								</li>
+								<li>
+									<div class="img-box">
+										<div class="inner-box">
+											<img src="img/blog-page/s3.jpg" alt="">
+										</div>
+									</div>
+									<div class="content-box">
+										<a href="#"><h4>Lorem Ipsum is simply dumm textand somthing more here</h4></a>
+										<span>17 jun, 2015</span>
+									</div>
+								</li>
+								<li>
+									<div class="img-box">
+										<div class="inner-box">
+											<img src="img/blog-page/s4.jpg" alt="">
+										</div>
+									</div>
+									<div class="content-box">
+										<a href="#"><h4>Lorem Ipsum is simply dumm textand somthing more here</h4></a>
+										<span>17 jun, 2015</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="single-sidebar-widget archive">
+							<h3 class="title">Archive</h3>
+							<ul>
+								<li><a href="#">October 2015</a></li>
+								<li><a href="#">November 2015</a></li>
+								<li><a href="#">December 2015</a></li>
+								<li><a href="#">January 2016</a></li>
+								<li><a href="#">February 2016</a></li>
+							</ul>
+						</div>						
+						<div class="single-sidebar-widget tags">
+							<h3 class="title">Keywords</h3>
+							<ul>
+								<li><a href="#">Child</a></li>
+								<li><a href="#">Charity</a></li>
+								<li><a href="#">Sponsorship</a></li>
+								<li><a href="#">Volunteers</a></li>
+								<li><a href="#">Feed</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="p_40" data-bg-color="#eee">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="clients-carousel owl-carousel owl-theme">
+						<div class="item">
+							<div class="img-box">
+								<img src="img/clients/logo-6.png" alt="">
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-box">
+								<img src="img/clients/logo-7.png" alt="">
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-box">
+								<img src="img/clients/logo-8.png" alt="">
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-box">
+								<img src="img/clients/logo-9.png" alt="">
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-box">
+								<img src="img/clients/logo-10.png" alt="">
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-box">
+								<img src="img/clients/logo-7.png" alt="">
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-box">
+								<img src="img/clients/logo-7.png" alt="">
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-box">
+								<img src="img/clients/logo-10.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer class="footer sec-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<a href="#">
+							<img src="img/resources/footer-logo.png" alt="Awesome Image"/>
+						</a>
+						<p>Lorem ipsum dolor sit amet, eu me evert laboramus, iudico </p>
+						<ul class="contact">
+							<li><i class="fa fa-map-marker"></i> <span>60 Grant Ave. Carteret NJ 0708</span></li>
+							<li><i class="fa fa-phone"></i> <span>(880) 1723801729</span></li>
+							<li><i class="fa fa-envelope-o"></i> <span>example@gmail.com</span></li>
+						</ul>
+						<ul class="social">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2 col-sm-6">
+					<div class="footer-widget quick-links">
+						<h3 class="title">Pages</h3>
+						<ul>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="causes-grid.html">Causes</a></li>
+							<li><a href="events-grid.html">Events</a></li>
+							<li><a href="faq.html">Faq</a></li>
+							<li><a href="blog-style-two.html">Archives</a></li>
+							<li><a href="blog-style-one.html">News</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 latest-post col-sm-6">
+					<div class="footer-widget latest-post">
+						<h3 class="title">Latest News</h3>
+						<ul>
+							<li>
+								<span class="border"></span>
+								<div class="content">
+									<a href="blog-details.html">If you need a crown or lorem an implant you will pay it </a>
+									<span>July 2, 2014</span>
+								</div>
+							</li>
+							<li>
+								<span class="border"></span>
+								<div class="content">
+									<a href="blog-details.html">If you need a crown or lorem an implant you will pay it </a>
+									<span>July 2, 2014</span>
+								</div>
+							</li>
+							<li>
+								<span class="border"></span>
+								<div class="content">
+									<a href="blog-details.html">If you need a crown or lorem an implant you will pay it </a>
+									<span>July 2, 2014</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="footer-widget contact-widget">
+						<h3 class="title">Contact Form</h3>
+						<form action="inc/sendemail.php" class="contact-form" id="footer-cf">
+							<input type="text" name="name"  placeholder="Full Name">
+							<input type="text" name="email" placeholder="Email Address" >
+							<textarea name="message" placeholder="Your Message"></textarea>
+							<button type="submit">Send</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<section class="footer-bottom">
+		<div class="container text-center">
+			<p>Theme Created By <a href="#">TEMPLATE PATH</a> with love</p>
+		</div>
+	</section>
+
+
+	<!-- main jQuery -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- bx slider -->
+	<script src="js/jquery.bxslider.min.js"></script>
+	<!-- owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- validate -->
+	<script src="js/validate.js"></script>
+	<!-- mixit up -->
+	<script src="js/jquery.mixitup.min.js"></script>
+	<!-- fancybox -->
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<!-- easing -->
+	<script src="js/jquery.easing.min.js"></script>
+	<!-- circle progress -->
+	<script src="js/circle-progress.js"></script>
+	<!-- appear js -->
+	<script src="js/jquery.appear.js"></script>
+	<!-- count to -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- gmap helper -->
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<!-- gmap main script -->
+	<script src="js/gmap.js"></script>
+
+	<!-- isotope script -->
+	<script src="js/isotope.pkgd.min.js"></script>
+	<!-- jQuery ui js -->
+	<script src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
+
+
+	<!-- thm custom script -->
+	<script src="js/custom.js"></script>
+
+
+
+</body>
+</html>
