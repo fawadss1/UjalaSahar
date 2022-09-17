@@ -3,7 +3,10 @@ from . import models
 
 
 def home(request):
-    return render(request, 'home.html')
+    gallery = models.Gallery.objects.all()
+    voluntreers = models.Volunteer.objects.all()
+    projects = models.Volunteer.objects.all()
+    return render(request, 'home.html', {'gallery': gallery, 'volunteer': voluntreers, 'projects': projects})
 
 
 def donation(request):

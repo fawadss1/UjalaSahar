@@ -25,7 +25,8 @@
                         <div class="inner-box">
                             <figure class="image"><a href="{% static 'Media/Images' %}/{{ i.Image }}"
                                                      class="lightbox-image">
-                                <img src="{% static 'Media/Images' %}/{{ i.Image }}" alt=""></a></figure>
+                                <img style="height: 250px" src="{% static 'Media/Images' %}/{{ i.Image }}" alt=""></a>
+                            </figure>
                             <a href="{% static 'Media/Images' %}/{{ i.Image }}" class="lightbox-image btn-zoom"
                                title="{{ i.Image_Title }}"><span class="icon fa fa-dot-circle-o"></span></a>
                         </div>
