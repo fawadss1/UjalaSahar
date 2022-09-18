@@ -1,0 +1,149 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Event Details{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>Event Details</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>Event Details</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="event-feature sec-padding" data-bg-color="#fafafa">
+        <div class="container">
+            <div class="row">
+                {% for i in EventData %}
+                    <div class="col-sm-12">
+                        <div class="border-1px">
+                            <div class="event">
+                                <div class="row">
+                                    <div class="col-xs-1">
+                                        <div class="event-thumb">
+                                            <ul class="event-date">
+                                                <li class="date">{{ i.Date|date:"d" }}</li>
+                                                <li class="month">{{ i.Date|date:"M" }}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-11">
+                                        <div class="event-content p_20 pl_0 pt_0">
+                                            <h2 class="event-title">{{ i.Title|title }}</h2>
+                                            <ul class="event-held list-inline font-13 mb_20">
+                                                <li data-text-color="#555"><i
+                                                        class="fa fa-clock-o"></i> {{ i.Time }}</li>
+                                                <li data-text-color="#555"><i
+                                                        class="fa fa-map-marker"></i> {{ i.Location|title }}</li>
+                                            </ul>
+                                            <p class="mb_20">{{ i.Description|title }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="text-center"><b>Photos Of The Event</b></h2>
+                            <section class="gallery-section p_0">
+                                <div class="clearfix">
+                                    <div class="image-box">
+                                        <div class="inner-box">
+                                            <figure class="image"><a href="{% static 'Media/Images' %}/{{ i.Photo1 }}"
+                                                                     class="lightbox-image">
+                                                <img style="height: 300px"
+                                                     src="{% static 'Media/Images' %}/{{ i.Photo1 }}"
+                                                     alt=""></a>
+                                            </figure>
+                                            <a href="{% static 'Media/Images' %}/{{ i.Photo1 }}"
+                                               class="lightbox-image btn-zoom"
+                                               title="{{ i.Title }}"><span class="icon fa fa-dot-circle-o"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="image-box">
+                                        <div class="inner-box">
+                                            <figure class="image"><a href="{% static 'Media/Images' %}/{{ i.Photo2 }}"
+                                                                     class="lightbox-image">
+                                                <img style="height: 300px"
+                                                     src="{% static 'Media/Images' %}/{{ i.Photo2 }}"
+                                                     alt=""></a>
+                                            </figure>
+                                            <a href="{% static 'Media/Images' %}/{{ i.Photo2 }}"
+                                               class="lightbox-image btn-zoom"
+                                               title="{{ i.Title }}"><span class="icon fa fa-dot-circle-o"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="image-box">
+                                        <div class="inner-box">
+                                            <figure class="image"><a href="{% static 'Media/Images' %}/{{ i.Photo3 }}"
+                                                                     class="lightbox-image">
+                                                <img style="height: 300px"
+                                                     src="{% static 'Media/Images' %}/{{ i.Photo3 }}"
+                                                     alt=""></a>
+                                            </figure>
+                                            <a href="{% static 'Media/Images' %}/{{ i.Photo3 }}"
+                                               class="lightbox-image btn-zoom"
+                                               title="{{ i.Title }}"><span class="icon fa fa-dot-circle-o"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="image-box">
+                                        <div class="inner-box">
+                                            <figure class="image"><a href="{% static 'Media/Images' %}/{{ i.Photo4 }}"
+                                                                     class="lightbox-image">
+                                                <img style="height: 300px"
+                                                     src="{% static 'Media/Images' %}/{{ i.Photo4 }}"
+                                                     alt=""></a>
+                                            </figure>
+                                            <a href="{% static 'Media/Images' %}/{{ i.Photo4 }}"
+                                               class="lightbox-image btn-zoom"
+                                               title="{{ i.Title }}"><span class="icon fa fa-dot-circle-o"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="image-box">
+                                        <div class="inner-box">
+                                            <figure class="image"><a href="{% static 'Media/Images' %}/{{ i.Photo5 }}"
+                                                                     class="lightbox-image">
+                                                <img style="height: 300px"
+                                                     src="{% static 'Media/Images' %}/{{ i.Photo5 }}"
+                                                     alt=""></a>
+                                            </figure>
+                                            <a href="{% static 'Media/Images' %}/{{ i.Photo5 }}"
+                                               class="lightbox-image btn-zoom"
+                                               title="{{ i.Title }}"><span class="icon fa fa-dot-circle-o"></span></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="overlay-white sec-padding parallax-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 promote-project text-center">
+                    <h3>Save Children From Hunger</h3>
+                    <div class="sec-title colored text-center">
+						<span class="decor">
+							<span class="inner"></span>
+						</span>
+                    </div>
+                    <h2>Became a part of the world lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quaerat atque, dolore. Amido
+                        ipsum dolor sit amet, consectetur adipisicing elit. Numquam quaerat atque, dolore.Lorem ipsum
+                        dolor sit amet, consectetur.</p>
+                    <a href="{% url 'donation' %}" class="thm-btn">Donate Now</a>
+                    <a href="{% url 'about' %}" class="thm-btn inverse">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

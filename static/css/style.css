@@ -325,6 +325,9 @@ img {
 .text-black {
 	color: #454545 !important;
 }
+.text-gray {
+	color: #bc64c0 !important;
+}
 
 .font-13 {
 	font-size: 13px !important;
