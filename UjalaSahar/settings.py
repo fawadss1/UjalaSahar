@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^s^+(7_be3r#m0=rwr^6pxl9wcdo2r54nj0(2=01z66xmp7)%k
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://ujalasaharupdated-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://ujalasahar.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
@@ -118,8 +118,8 @@ USE_TZ = True
 
 STATIC_URL = '/Static/'
 if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'Static')
-STATICFILES_DIRS = [BASE_DIR / 'static']
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [BASE_DIR / 'Static']
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/Media/Images')
 MEDIA_URL = 'Static/Media/Images/'
 
