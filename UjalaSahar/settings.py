@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-^s^+(7_be3r#m0=rwr^6pxl9wcdo2r54nj0(2=01z66xmp7)%k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://ujalasahar.up.railway.app']
+ALLOWED_HOSTS = ['theujalasahar.org', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://ujalasahar.up.railway.app', 'https://theujalasahar.org']
 # Application definition
 
 INSTALLED_APPS = [
