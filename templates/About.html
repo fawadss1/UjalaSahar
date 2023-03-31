@@ -1,0 +1,405 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>About Us</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>About Us</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-padding about-content full-sec">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-5 col-md-12">
+                    <div class="full-sec-content">
+                        <div class="sec-title style-two">
+                            <h2>More About Us</h2>
+                            <span class="decor">
+								<span class="inner"></span>
+							</span>
+                        </div>
+                        <h3>We Provide Charity Accross Pakistan<br> Service Since 1993</h3>
+                        <br>
+                        <p>
+                            Welcome to Ujalasahar, a charity foundation committed to making a positive impact in
+                            our community and beyond. <br>
+                            At Ujalasahar, we believe that every person deserves access to basic necessities
+                            such as food, shelter, and education. We work tirelessly to support various causes
+                            that help improve the lives of those in need. <br>
+                            Our dedicated team of volunteers and staff members are passionate about giving back
+                            to our community and making a difference in the world. Through fundraising events,
+                            community outreach programs, and partnerships with other organizations, we aim to
+                            create a better future for all. <br>
+                            Thank you for your support and for joining us in our mission to make the world a
+                            brighter, more hopeful place for everyone.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-7 hidden-md text-right">
+                    <img src="{% static 'img/resources/about-1.jpg' %}" alt="No Image"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-serivce sec-padding">
+        <div class="container">
+            <div class="sec-title text-center">
+                <h2>Our Mission</h2>
+                <span class="decor"><span class="inner"></span></span>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-service-home">
+                        <div class="icon-box">
+                            <div class="inner-box">
+                                <i class="flaticon-gesture-1"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Charity For Education</h3>
+                            <p>We are dedicated to providing access to education for all. We believe that education is a
+                                fundamental right that should be available to everyone, regardless of their background
+                                or c...</p>
+                            <a href="{% url 'educaion' %}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-service-home">
+                        <div class="icon-box">
+                            <div class="inner-box">
+                                <i class="flaticon-people-1"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Feed for hungry child</h3>
+                            <p>We believe that every child deserves access to nutritious food, which is why we are
+                                committed to fighting hunger in our community. Our program is dedicated to providing
+                                meals for children who may not have access to enough food on a regular ...</p>
+                            <a href="{% url 'food' %}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-service-home">
+                        <div class="icon-box">
+                            <div class="inner-box">
+                                <i class="flaticon-hand"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Home for homeless</h3>
+                            <p>We believe that every person deserves a safe and stable place to call home, which is why
+                                we are committed to fighting homelessness in our community. Our program is dedicated to
+                                providing housing and support services for individuals and families who are experiencing
+                                ... <br>
+                                <a href="{% url 'homeless' %}">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <div class="container">
+            <div class="clearfix">
+                <div class="call-to-action-corner col-md-4">
+                    <div class="single-call-to-action">
+                        <div class="icon-box">
+                            <div class="inner-box">
+                                <i class="flaticon-circle"></i>
+                            </div>
+                        </div>
+                        <div class="content-box">
+                            <h3>Donation</h3>
+                            <p>Make a difference with a donation! Your support can help us continue our important work
+                                in providing resources and support to those in need.</p>
+                            <a href="{% url 'donation' %}" class="thm-btn inverse">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="call-to-action-center col-md-4">
+                    <div class="single-call-to-action">
+                        <div class="icon-box">
+                            <div class="inner-box">
+                                <i class="flaticon-social"></i>
+                            </div>
+                        </div>
+                        <div class="content-box">
+                            <h3>Volunteer</h3>
+                            <p>Volunteer with us and make a difference in your community! Our charity organization
+                                relies on the support of dedicated volunteers to carry out our mission.</p>
+                            <a href="{% url 'volunteers' %}" class="thm-btn inverse">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="call-to-action-corner col-md-4">
+                    <div class="single-call-to-action">
+                        <div class="icon-box">
+                            <div class="inner-box">
+                                <i class="flaticon-medical"></i>
+                            </div>
+                        </div>
+                        <div class="content-box">
+                            <h3>Fundraise</h3>
+                            <p>Help us make a difference! Our charity organization is committed to improving the lives
+                                of those in need, but we can't do it without your support.</p>
+                            <a href="{% url 'donation' %}" class="thm-btn inverse">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-padding faq-home">
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="sec-title style-two">
+                        <h2>Why Choose us?</h2>
+                        <span class="decor">
+							<span class="inner"></span>
+						</span>
+                    </div>
+                    <div class="accrodion-grp" data-grp-name="faq-accrodion">
+                        <div class="accrodion active">
+                            <div class="accrodion-title">
+                                <h4>
+									<span class="decor">
+										<span class="inner"></span>
+									</span>
+                                    <span class="text">Accross Pakistan charity programs </span>
+                                </h4>
+                            </div>
+                            <div class="accrodion-content">
+                                <p>Our organization is dedicated to making a positive impact in the lives of individuals
+                                    and communities throughout Pakistan. We work to identify areas where our resources
+                                    and support can make the greatest impact, and we partner with local organizations
+                                    and community leaders to address the most pressing needs. <br>
+                                    Our programs cover a range of areas, including education, health and wellness,
+                                    environmental sustainability, poverty alleviation, and disaster relief. We believe
+                                    that by working together, we can create lasting change and build stronger, more
+                                    resilient communities. <br>
+                                    We are committed to ensuring that our programs are inclusive, equitable, and
+                                    accessible to all members of the community, regardless of their background or
+                                    circumstances. We also prioritize transparency and accountability in all of our
+                                    activities, so our donors and supporters can see the impact of their contributions.
+                                    <br>
+                                    Thank you for considering a donation or volunteering your time to support our
+                                    charity programs across Pakistan. Together, we can make a difference and create a
+                                    brighter future for all.</p>
+                            </div>
+                        </div>
+                        <div class="accrodion ">
+                            <div class="accrodion-title">
+                                <h4>
+									<span class="decor">
+										<span class="inner"></span>
+									</span>
+                                    <span class="text">Leading volunteer groups </span>
+                                </h4>
+                            </div>
+                            <div class="accrodion-content">
+                                <p>We believe that volunteering is a powerful way to make a positive impact in our
+                                    community and beyond. Our program is dedicated to leading volunteer groups that work
+                                    on various initiatives to create positive change. <br>
+                                    Through partnerships with local organizations and community leaders, we identify
+                                    areas where volunteers can make a meaningful impact. Our volunteers work on a range
+                                    of projects, including community service initiatives, environmental sustainability
+                                    efforts, and social justice campaigns. <br>
+                                    Our goal is to inspire and empower individuals to take action and create change in
+                                    their communities. We believe that by working together, we can make a significant
+                                    impact on the world around us. With your support, we can continue to lead volunteer
+                                    groups and create a brighter future for all. Thank you for joining us in our mission
+                                    to make a difference.</p>
+                            </div>
+                        </div>
+                        <div class="accrodion ">
+                            <div class="accrodion-title">
+                                <h4>
+									<span class="decor">
+										<span class="inner"></span>
+									</span>
+                                    <span class="text">Charity programs for children </span>
+                                </h4>
+                            </div>
+                            <div class="accrodion-content">
+                                <p>We believe that every child deserves the opportunity to thrive and reach their full
+                                    potential, which is why we are committed to supporting programs that benefit
+                                    children in need. Our organization focuses on a range of programs that provide
+                                    resources, support, and opportunities for children and families. <br>
+                                    Our programs include educational support, mentorship, health and wellness
+                                    initiatives, and access to basic necessities such as food, shelter, and clothing. We
+                                    work closely with local organizations, schools, and community leaders to identify
+                                    areas where we can make the greatest impact. <br>
+                                    Our goal is to create a world where every child has the chance to succeed,
+                                    regardless of their circumstances. With the help of our donors and volunteers, we
+                                    can continue to make a difference in the lives of children and families in our
+                                    community and beyond. Thank you for joining us in our mission to create a brighter
+                                    future for all children.</p>
+                            </div>
+                        </div>
+                        <div class="accrodion ">
+                            <div class="accrodion-title">
+                                <h4>
+									<span class="decor">
+										<span class="inner"></span>
+									</span>
+                                    <span class="text">Online donation system with different method</span>
+                                </h4>
+                            </div>
+                            <div class="accrodion-content">
+                                <p>We are committed to making it as easy as possible for our donors to support our
+                                    mission and make a difference in the lives of those we serve. That's why we offer a
+                                    variety of donation methods through our online donation platform. <br>
+                                    Our platform allows you to make a one-time donation or set up a recurring donation,
+                                    so you can support our organization on an ongoing basis. We accept donations through
+                                    credit card, PayPal, and other online payment methods, making it easy and convenient
+                                    to give. <br>
+                                    In addition, we offer various giving levels and opportunities to support specific
+                                    programs or initiatives within our organization. You can choose to give to a
+                                    specific cause or make a general donation to support our overall mission. <br>
+                                    We also ensure that your online donations are secure and that your personal
+                                    information is kept confidential. You can rest assured that your donation is going
+                                    directly to support those in need. <br>
+                                    Thank you for considering a donation to our organization through our online donation
+                                    system. Your support helps us to make a positive impact in the lives of those we
+                                    serve.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 hidden-md">
+                    <div class="img-masonary">
+                        <div class="img-w1 img-h1">
+                            <img src="{% static 'img/resources/about-3.jpg' %}" height="450" width="280" alt="">
+                        </div>
+                        <div class="img-w1 img-h1">
+                            <img src="{% static 'img/resources/about-2.jpg' %}" height="450" width="280" alt="">
+                        </div>
+                        <div class="img-w1 img-h1">
+                            <img src="{% static 'img/resources/about-4.jpg' %}" height="450" width="280" alt="">
+                        </div>
+                        <div class="img-w1 img-h1">
+                            <img src="{% static 'img/resources/about-5.jpg' %}" height="450" width="280" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="fact-counter-wrapper sec-padding parallax-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-4">
+                    <h2>We are served since <b>35 years</b> <br>to helpless people with trust and <br>we are happy</h2>
+                    <a href="{% url 'volunteers' %}" class="thm-btn inverse">Be a part of us</a>
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <div class="single-fact">
+                        <div class="icon-box">
+                            <i class="flaticon-shapes-2"></i>
+                        </div>
+                        <span class="timer" data-from="0" data-to="365" data-speed="5000"
+                              data-refresh-interval="50">150</span>
+                        <p>Total Awards</p>
+                    </div>
+                    <div class="single-fact">
+                        <div class="icon-box">
+                            <i class="flaticon-people-3"></i>
+                        </div>
+                        <span class="timer" data-from="0" data-to="{{ volunteers.count }}" data-speed="5000"
+                              data-refresh-interval="50">0</span>
+                        <p>Total Volunteer</p>
+                    </div>
+                    <div class="single-fact">
+                        <div class="icon-box">
+                            <i class="flaticon-hands"></i>
+                        </div>
+                        <span class="timer" data-from="0" data-to="{{ projects.count }}" data-speed="5000"
+                              data-refresh-interval="50">0</span>
+                        <p>Total Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% if volunteers %}
+        <section class="sec-padding meet-Volunteer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="sec-title text-left">
+                            <h2>Meet Our Volunteers</h2>
+                            <p>We are incredibly grateful for our volunteers and the difference they make every day. If
+                                you are interested in joining our team and becoming a part of our mission, please don't
+                                hesitate to contact us. Together, we can make a real difference in the world.</p>
+                            <span class="decor"><span class="inner"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="team-carousel owl-carousel owl-theme">
+                        {% for i in volunteers %}
+                            <div class="item">
+                                <div class="single-team-member">
+                                    <div class="img-box">
+                                        <img style="height: 300px"
+                                             src="{% static 'Media/Images' %}/{{ i.Photo }}"
+                                             alt="No Image">
+                                        <div class="overlay">
+                                            <div class="box">
+                                                <div class="content">
+                                                    <ul>
+                                                        <li><a href="https://fb.com/{{ i.Facebook_Username }}"
+                                                               target="_blank"><i
+                                                                class="fa fa-facebook"></i></a></li>
+                                                        <li>
+                                                            <a href="https://twitter.com/{{ i.Twitter_Username }}"
+                                                               target="_blank"><i class="fa fa-twitter"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://linkedin.com/in/{{ i.Linkedin_Username }}"
+                                                               target="_blank"><i
+                                                                    class="fa fa-linkedin"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3>{{ i.Name }}</h3>
+                                    <span>{{ i.Income_Source }}</span>
+                                    <p>{{ i.Describtion|slice:'100' }}</p>
+                                    <a href="{% url 'volunteer profile' i.Name|slugify|title i.id %}"
+                                       class="thm-btn">
+                                        View Profile</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}

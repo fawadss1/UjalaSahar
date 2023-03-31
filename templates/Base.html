@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} | Ujala Sahar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="logo pull-left">
+            <a href="/">
+                <img src="{% static 'img/resources/logo.png' %}" alt="Header Logo"/>
+            </a>
+        </div>
+        <div class="header-right-info pull-right clearfix">
+            <div class="single-header-info">
+                <div class="icon-box">
+                    <div class="inner-box">
+                        <i class="flaticon-interface-2"></i>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>EMAIL</h3>
+                    <a href="mailto:uso1993@yahoo.com"><b>uso1993@yahoo.com</b></a>
+                </div>
+            </div>
+            <div class="single-header-info">
+                <div class="icon-box">
+                    <div class="inner-box">
+                        <i class="flaticon-telephone"></i>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Call Now</h3>
+                    <a href="tel:+923459517808"><b>(+92) 345-9517808</b></a>
+                </div>
+            </div>
+            <div class="single-header-info">
+                <a class="thm-btn" href="{% url 'donation' %}">Donate Now</a>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="mainmenu-area stricky">
+    <div class="container">
+        <div class="navigation text-center">
+            <div class="nav-header">
+                <ul>
+                    <li><a class="{% if request.resolver_match.url_name == "home" %}text-gray{% endif %}" href="/">
+                        <span style="font-size: 20px" class="fa fa-home"></span></a></li>
+                    <li><a class="{% if request.resolver_match.url_name == "events" %}text-gray{% endif %}"
+                           href="{% url 'events' %}">Events</a></li>
+                    <li><a class="{% if request.resolver_match.url_name == "projects" %}text-gray{% endif %}"
+                           href="{% url 'projects' %}">Our Projects</a></li>
+                    <li><a class="{% if request.resolver_match.url_name == "volunteers" %}text-gray{% endif %}"
+                           href="{% url 'volunteers' %}">Our Volunteers</a></li>
+                    <li><a class="{% if request.resolver_match.url_name == "gallery" %}text-gray{% endif %}"
+                           href="{% url 'gallery' %}">Gallery</a></li>
+                    <li><a class="{% if request.resolver_match.url_name == "donation" %}text-gray{% endif %}"
+                           href="{% url 'donation' %}">Donation</a></li>
+                    <li><a class="{% if request.resolver_match.url_name == "contact" %}text-gray{% endif %}"
+                           href="{% url 'contact' %}">Contact Us</a></li>
+                    <li><a class="{% if request.resolver_match.url_name == "about" %}text-gray{% endif %}"
+                           href="{% url 'about' %}">About Us</a></li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <button><i class="fa fa-bars"></i></button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div>
+    {% block bodyContent %}{% endblock %}
+</div>
+<footer class="footer sec-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-widget about-widget">
+                    <a href="/">
+                        <img src="{% static 'img/resources/footer-logo.png' %}" alt="Footer Logo"/>
+                    </a>
+                    <ul class="contact">
+                        <li><i class="fa fa-map-marker"></i> <span>House No.145, Street No.6, <br>
+                            Sector T, Sheikhmaltoon Town <br> Dist Mardan KPK, Pakistan</span></li>
+                        <li><i class="fa fa-phone"></i><span><a class="text-white" href="tel:+923459517808">(+92) 345-9517808</a></span>
+                        </li>
+                        <li><i class="fa fa-envelope-o"></i><span><a class="text-white" href="mailto:uso1993@yahoo.com">uso1993@yahoo.com</a></span>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li><a href="https://bit.ly/3lAUx6E" target="_blank"><i
+                                class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 latest-post col-sm-6">
+                <div class="footer-widget latest-post">
+                    <h3 class="title">Latest Events</h3>
+                    <ul>
+                        {% if eventsData %}
+                            {% for i in eventsData %}
+                                <li>
+                                    <span class="border"></span>
+                                    <div class="content">
+                                        <a href="{% url 'event details'  i.Title|slugify|title i.id %}">{{ i.Title|title }}</a>
+                                        <span>{{ i.Date|date:"M d, Y" }}</span>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        {% else %}
+                            <li>
+                                <span class="border"></span>
+                                <div class="content">
+                                    <p>No Events Record Found</p>
+                                </div>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 latest-post col-sm-6">
+                <div class="footer-widget latest-post">
+                    <h3 class="title">Latest Projects</h3>
+                    <ul>
+                        {% if projectsData %}
+                            {% for i in projectsData %}
+                                <li>
+                                    <span class="border"></span>
+                                    <div class="content">
+                                        <a href="{% url 'project details' i.Title|slugify|title i.id %}">{{ i.Title|title }}</a>
+                                        <span>{{ i.Date|date:"M d, Y" }}</span>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        {% else %}
+                            <li>
+                                <span class="border"></span>
+                                <div class="content">
+                                    <p>No Projects Record Found</p>
+                                </div>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-widget contact-widget">
+                    <h3 class="title">Visitors</h3>
+                    <a href="https://info.flagcounter.com/C458"><img
+                            src="https://s01.flagcounter.com/countxl/C458/bg_262F36/txt_E0E0E0/border_262F36/columns_3/maxflags_30/viewers_1/labels_1/pageviews_1/flags_0/percent_0/"
+                            alt="Visitors Counter"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<section class="footer-bottom">
+    <div class="container text-center">
+        <p>&copy; <span id="year"></span> UjalaSahar.Org, All Rights Reserved. Developed By <a
+                href="https://fawadss1.github.io/Resume" target="_blank">Fawad</a>
+        </p>
+    </div>
+</section>
+
+<script>
+    const d = new Date();
+    document.getElementById("year").innerHTML = d.getFullYear();
+</script>
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery-parallax.js' %}"></script>
+<script src="{% static 'js/validate.js' %}"></script>
+<script src="{% static 'js/jquery.mixitup.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'js/circle-progress.js' %}"></script>
+<script src="{% static 'js/jquery.appear.js' %}"></script>
+<script src="{% static 'js/jquery.countTo.js' %}"></script>
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

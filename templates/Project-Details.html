@@ -1,0 +1,87 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Project Details{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>Project Details</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>Project Details</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="event-feature sec-padding" data-bg-color="#fafafa">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="border-1px">
+                        <div class="mb_30">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="thumb">
+                                        <img class="full-width" src="{% static 'Media/Images' %}/{{ proDetails.Photo }}"
+                                             alt="No Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <div class="event-thumb">
+                                        <ul class="event-date">
+                                            <li class="date">{{ proDetails.Date|date:"d" }}</li>
+                                            <li class="month">{{ proDetails.Date|date:"M" }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-11">
+                                    <div class="event-content p_20 pl_0 pt_0">
+                                        <h2 class="event-title">{{ proDetails.Title|title }}</h2>
+                                        <ul class="event-held list-inline font-13 mb_20">
+                                            <li data-text-color="#555"><i
+                                                    class="fa fa-map-marker"></i> {{ proDetails.Location|title }}</li>
+                                        </ul>
+                                        <p class="mb_20">{{ proDetails.Description|title }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="overlay-white sec-padding parallax-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 promote-project text-center">
+                    <h3>Save Children From Hunger</h3>
+                    <div class="sec-title colored text-center">
+						<span class="decor">
+							<span class="inner"></span>
+						</span>
+                    </div>
+                    <h2>Became a part of us to feed & educate people</h2>
+                    <p>
+                        Ujalasahar, a charity foundation committed to making a positive impact in our
+                        community and beyond. At Ujalasahar, we believe that every person deserves access to basic
+                        necessities such as food, shelter, and education. We work tirelessly to support various causes
+                        that help improve the lives of those in need.</p>
+                    <a href="{% url 'donation' %}" class="thm-btn">Donate Now</a>
+                    <a href="{% url 'about' %}" class="thm-btn inverse">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

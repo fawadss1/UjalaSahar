@@ -1,0 +1,159 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Event Details{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>Event Details</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>Event Details</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="event-feature sec-padding" data-bg-color="#fafafa">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="border-1px">
+                        <div class="event">
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <div class="event-thumb">
+                                        <ul class="event-date">
+                                            <li class="date">{{ EventData.Date|date:"d" }}</li>
+                                            <li class="month">{{ EventData.Date|date:"M" }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-11">
+                                    <div class="event-content p_20 pl_0 pt_0">
+                                        <h2 class="event-title">{{ EventData.Title|title }}</h2>
+                                        <ul class="event-held list-inline font-13 mb_20">
+                                            <li data-text-color="#555"><i
+                                                    class="fa fa-clock-o"></i> {{ EventData.Time }}</li>
+                                            <li data-text-color="#555"><i
+                                                    class="fa fa-map-marker"></i> {{ EventData.Location|title }}</li>
+                                        </ul>
+                                        <p class="mb_20">{{ EventData.Description|title }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="text-center"><b>Photos Of The Event</b></h2>
+                        <section class="gallery-section p_0">
+                            <div class="clearfix">
+                                <div class="image-box">
+                                    <div class="inner-box">
+                                        <figure class="image"><a
+                                                href="{% static 'Media/Images' %}/{{ EventData.Photo1 }}"
+                                                class="lightbox-image">
+                                            <img style="height: 300px"
+                                                 src="{% static 'Media/Images' %}/{{ EventData.Photo1 }}"
+                                                 alt=""></a>
+                                        </figure>
+                                        <a href="{% static 'Media/Images' %}/{{ EventData.Photo1 }}"
+                                           class="lightbox-image btn-zoom"
+                                           title="{{ i.Title }}"><span class="icon fa fa-dot-circle-o"></span></a>
+                                    </div>
+                                </div>
+                                <div class="image-box">
+                                    <div class="inner-box">
+                                        <figure class="image"><a
+                                                href="{% static 'Media/Images' %}/{{ EventData.Photo2 }}"
+                                                class="lightbox-image">
+                                            <img style="height: 300px"
+                                                 src="{% static 'Media/Images' %}/{{ EventData.Photo2 }}"
+                                                 alt=""></a>
+                                        </figure>
+                                        <a href="{% static 'Media/Images' %}/{{ EventData.Photo2 }}"
+                                           class="lightbox-image btn-zoom"
+                                           title="{{ EventData.Title }}"><span
+                                                class="icon fa fa-dot-circle-o"></span></a>
+                                    </div>
+                                </div>
+                                <div class="image-box">
+                                    <div class="inner-box">
+                                        <figure class="image"><a
+                                                href="{% static 'Media/Images' %}/{{ EventData.Photo3 }}"
+                                                class="lightbox-image">
+                                            <img style="height: 300px"
+                                                 src="{% static 'Media/Images' %}/{{ EventData.Photo3 }}"
+                                                 alt=""></a>
+                                        </figure>
+                                        <a href="{% static 'Media/Images' %}/{{ EventData.Photo3 }}"
+                                           class="lightbox-image btn-zoom"
+                                           title="{{ i.Title }}"><span class="icon fa fa-dot-circle-o"></span></a>
+                                    </div>
+                                </div>
+                                <div class="image-box">
+                                    <div class="inner-box">
+                                        <figure class="image"><a
+                                                href="{% static 'Media/Images' %}/{{ EventData.Photo4 }}"
+                                                class="lightbox-image">
+                                            <img style="height: 300px"
+                                                 src="{% static 'Media/Images' %}/{{ EventData.Photo4 }}"
+                                                 alt=""></a>
+                                        </figure>
+                                        <a href="{% static 'Media/Images' %}/{{ EventData.Photo4 }}"
+                                           class="lightbox-image btn-zoom"
+                                           title="{{ EventData.Title }}"><span
+                                                class="icon fa fa-dot-circle-o"></span></a>
+                                    </div>
+                                </div>
+                                <div class="image-box">
+                                    <div class="inner-box">
+                                        <figure class="image"><a
+                                                href="{% static 'Media/Images' %}/{{ EventData.Photo5 }}"
+                                                class="lightbox-image">
+                                            <img style="height: 300px"
+                                                 src="{% static 'Media/Images' %}/{{ EventData.Photo5 }}"
+                                                 alt=""></a>
+                                        </figure>
+                                        <a href="{% static 'Media/Images' %}/{{ EventData.Photo5 }}"
+                                           class="lightbox-image btn-zoom"
+                                           title="{{ EventData.Title }}"><span
+                                                class="icon fa fa-dot-circle-o"></span></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overlay-white sec-padding parallax-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 promote-project text-center">
+                    <h3>Save Children From Hunger</h3>
+                    <div class="sec-title colored text-center">
+						<span class="decor">
+							<span class="inner"></span>
+						</span>
+                    </div>
+                    <h2>Became a part of Us</h2>
+                    <p>By joining us, you can help us provide aid and support to individuals and communities in need,
+                        whether it's through disaster relief efforts, education and healthcare programs, or initiatives
+                        to combat poverty and inequality.
+                        No matter how big or small your contribution may be, it can make a real difference in someone's
+                        life. Together, we can work towards creating a better world for everyone.
+                        So, come and join us! Your support and generosity are greatly appreciated, and we look forward
+                        to having you as a part of our mission.</p>
+                    <a href="{% url 'donation' %}" class="thm-btn">Donate Now</a>
+                    <a href="{% url 'about' %}" class="thm-btn inverse">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

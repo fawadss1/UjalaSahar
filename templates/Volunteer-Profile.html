@@ -1,0 +1,103 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Volunteer Profile{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>Volunteer Profile</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>Volunteer Profile</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-padding volunteer-profile">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{% static 'Media/Images' %}/{{ vulProfile.Photo }}" alt="No Image">
+                </div>
+                <div class="col-md-8 single-team-member">
+                    <h3>{{ vulProfile.Name }}</h3>
+                    <span>{{ vulProfile.Employment }}</span>
+                    <p>{{ vulProfile.Describtion }}</p>
+                    <ul class="infos">
+                        <li class="row">
+                            <span class="col-md-3">Hobby</span>
+                            <span class="col-md-3">{{ vulProfile.Hobbies|title }}</span>
+                        </li>
+                        <li class="row">
+                            <span class="col-md-3">Edu. Qualification</span>
+                            <span class="col-md-3">{{ vulProfile.Qualification|slugify|upper }}</span>
+                        </li>
+                        <li class="row">
+                            <span class="col-md-3">Experience</span>
+                            <span class="col-md-4">{{ vulProfile.Years_of_Experience }} Years</span>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li><a href="https://fb.com/{{ vulProfile.Facebook_Username }}" target="_blank"><i
+                                class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/{{ vulProfile.Twitter_Username }}" target="_blank"><i
+                                class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://linkedin.com/in/{{ vulProfile.Linkedin_Username }}" target="_blank"><i
+                                class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {#    <section class="home-appointment-form volunteer-profile">#}
+    {#        <div class="container">#}
+    {#            <hr>#}
+    {#            <div class="heading">#}
+    {#                <h3>Became a part of the Ujala Sahar by joined our volunteer group.<br> Join Now!!</h3>#}
+    {#            </div>#}
+    {#            <div class="form-grp clearfix">#}
+    {#                <form action="#" class="clearfix contact-form" id="appointment-form">#}
+    {#                    <div class="single-form">#}
+    {#                        <input type="text" placeholder="Full Name" name="name">#}
+    {#                    </div>#}
+    {#                    <div class="single-form">#}
+    {#                        <input type="text" placeholder="Email" name="email">#}
+    {#                    </div>#}
+    {#                    <div class="single-form">#}
+    {#                        <div class="select-input-wrapper">#}
+    {#                            <select class="select-input" name="category">#}
+    {#                                <option value="" selected="selected">Select Your Country</option>#}
+    {#                                <option value="General Motors">Japan</option>#}
+    {#                                <option value="Land Rover">Australia</option>#}
+    {#                                <option value="Lexus">Bangladesh</option>#}
+    {#                                <option value="Lincoln">Japan</option>#}
+    {#                                <option value="Lincoln">Bangladesh</option>#}
+    {#                            </select>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                    <div class="single-form">#}
+    {#                        <div class="select-input-wrapper">#}
+    {#                            <select class="select-input" name="category">#}
+    {#                                <option value="" selected="selected">Select City</option>#}
+    {#                                <option value="General Motors">Dhaka</option>#}
+    {#                                <option value="Land Rover">Khulna</option>#}
+    {#                                <option value="Lexus">Dhaka</option>#}
+    {#                                <option value="Lincoln">Khulna</option>#}
+    {#                                <option value="Lincoln">Dhaka</option>#}
+    {#                            </select>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                    <div class="single-form">#}
+    {#                        <button type="submit">Send Now</button>#}
+    {#                    </div>#}
+    {#                </form>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+{% endblock %}

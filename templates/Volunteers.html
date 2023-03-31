@@ -1,0 +1,105 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Volunteers{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>Volunteers</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>Volunteers</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-padding meet-Volunteer pb_30">
+        <div class="container">
+            <div class="row">
+                {% if vulData %}
+                    {% for i in vulData %}
+                        <div class="col-md-3">
+                            <div class="single-team-member mb_60">
+                                <div class="img-box">
+                                    <img style="height: 300px" class="full-width" src="{% static 'Media/Images' %}/{{ i.Photo }}"
+                                         alt="No Image">
+                                    <div class="overlay">
+                                        <div class="box">
+                                            <div class="content">
+                                                <ul>
+                                                    <li><a href="https://fb.com/{{ i.Facebook_Username }}"
+                                                           target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="https://twitter.com/{{ i.Twitter_Username }}"
+                                                           target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="https://linkedin.com/in/{{ i.Linkedin_Username }}"
+                                                           target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>{{ i.Name }}</h3>
+                                <span>{{ i.Income_Source }}</span>
+                                <p>{{ i.Describtion|slice:":100" }}...</p>
+                                <a href="{% url 'volunteer profile' i.Name|slugify|title i.id %}" class="thm-btn">View Profile</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <h3 class="text-danger text-center">No Volunteers Record Found</h3>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+{#    <section class="home-appointment-form volunteer-profile">#}
+{#        <div class="container">#}
+{#            <hr>#}
+{#            <div class="heading">#}
+{#                <h3>Became a part of the Ujala Sahar by joined our volunteer group.<br> Join Now!!</h3>#}
+{#            </div>#}
+{#            <div class="form-grp clearfix">#}
+{#                <form action="#" class="clearfix contact-form" id="appointment-form">#}
+{#                    <div class="single-form">#}
+{#                        <input type="text" placeholder="Full Name" name="name">#}
+{#                    </div>#}
+{#                    <div class="single-form">#}
+{#                        <input type="text" placeholder="Email" name="email">#}
+{#                    </div>#}
+{#                    <div class="single-form">#}
+{#                        <div class="select-input-wrapper">#}
+{#                            <select class="select-input" name="category">#}
+{#                                <option value="" selected="selected">Select Your Country</option>#}
+{#                                <option value="General Motors">Japan</option>#}
+{#                                <option value="Land Rover">Australia</option>#}
+{#                                <option value="Lexus">Bangladesh</option>#}
+{#                                <option value="Lincoln">Japan</option>#}
+{#                                <option value="Lincoln">Bangladesh</option>#}
+{#                            </select>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="single-form">#}
+{#                        <div class="select-input-wrapper">#}
+{#                            <select class="select-input" name="category">#}
+{#                                <option value="" selected="selected">Select City</option>#}
+{#                                <option value="General Motors">Dhaka</option>#}
+{#                                <option value="Land Rover">Khulna</option>#}
+{#                                <option value="Lexus">Dhaka</option>#}
+{#                                <option value="Lincoln">Khulna</option>#}
+{#                                <option value="Lincoln">Dhaka</option>#}
+{#                            </select>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="single-form">#}
+{#                        <button type="submit">Send Now</button>#}
+{#                    </div>#}
+{#                </form>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{% endblock %}

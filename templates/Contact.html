@@ -1,0 +1,115 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Contact Us{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>Contact Us</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>Contact Us</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-content sec-padding">
+        <div class="container">
+            <div class="sec-title text-center">
+                {% if messages %}
+                    {% for i in messages %}
+                        <h2><b class="text-success">{{ i }}</b></h2>
+                    {% endfor %}
+                {% endif %}
+                <p>We are proud to introduce Ujala Sahar, a charity foundation dedicated to creating a brighter future
+                    for underprivileged individuals and communities. Our mission is to provide aid and support to those
+                    in need, particularly in the areas of education, healthcare, and community development. Through our
+                    various programs and initiatives, we aim to empower individuals and communities to reach their full
+                    potential and create positive change in their own lives. </p>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Contact Form</h2>
+                    <form action="" method="POST" class="contact-form row" id="contact-page-contact-form contactForm">
+                        {% csrf_token %}
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" name="name" placeholder="Your Name" required>
+                            <input class="form-control" type="email" name="email" placeholder="Your Email" required>
+                            <input class="form-control" type="text" name="phone" placeholder="Your Phone" required>
+
+                        </div>
+                        <div class="col-md-6">
+                            <textarea class="form-control" name="message" placeholder="Your Message" cols="30" rows="10"
+                                      required></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="thm-btn" onclick="myFunction()">Send Now</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <h2>Address</h2>
+                    <ul class="contact-info">
+                        <li>
+                            <div class="icon-box">
+                                <div class="inner">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                            </div>
+                            <div class="content-box">
+                                <h4>Address</h4>
+                                <p>House No.145, Street No.6, <br>
+                                    Sector T, Sheikhmaltoon Town <br> Dist Mardan KPK, Pakistan</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <div class="inner">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                            </div>
+                            <div class="content-box">
+                                <h4>Phone</h4>
+                                <a href="tel:+923459517808" class="text-black">(+92) 345-9517808</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <div class="inner">
+                                    <i class="fa fa-whatsapp"></i>
+                                </div>
+                            </div>
+                            <div class="content-box">
+                                <h4>WhatsApp</h4>
+                                <a href="https://api.whatsapp.com/send/?phone=03459517808&amp;text=Hey%20Ujala Sahar&amp;app_absent=0"
+                                   target="_blank" class="text-black">(+92) 345-9517808</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <div class="inner">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
+                            </div>
+                            <div class="content-box">
+                                <h4>Email</h4>
+                                <a href="mailto:uso1993@yahoo.com" class="text-black">uso1993@yahoo.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function myFunction() {
+            document.getElementById("contactForm").submit();
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Donation{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>Donation</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>Donation</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-content sec-padding">
+        <div class="container">
+            <div class="sec-title">
+                <h2 class="text-thm text-center">Make a Donation</h2>
+                <p>At Ujala Sahar, our mission is to provide aid and support to underprivileged individuals and
+                    communities in need. We strive to empower them through education, healthcare, and community
+                    development programs, and create a positive impact in their lives. <br>
+                    However, we cannot do this without your help. We rely on the generosity of donors like you to fund
+                    our programs and initiatives, and make a real difference in the world. Every contribution, no matter
+                    how big or small, can help us create a brighter future for those in need. <br>
+                    Please Support Us To Serve Homeless People And Educate and Feed Thier Childerns</p>
+                <hr>
+                <h3 class="text-center"><code><b>Bank : First Women Bank Limited<br>Account Title : Ujala Sahar
+                    Organization Marda<br>IBAN : PK83FWOM0019024718410000</b></code></h3>
+            </div>
+        </div>
+    </section>
+    <!--<section class="sec-padding donation-section">
+        <div class="container">
+            <h2 class="text-thm">Make a Donation</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate adipisci neque eius quod, fugiat
+                saepe
+                unde. In quibusdam, cum sit blanditiis explicabo rerum. Ipsa fugit, aspernatur quo at velit ex.</p>
+            <hr>
+            <div class="donation-form-outer">
+                <form action="Contact.html" method="post">
+                    <div class="form-portlet">
+                        <h3>Donation Amount</h3>
+                        <div class="row clearfix">
+                            <div class="form-group col-lg-7 col-md-12 col-xs-12 clearfix">
+                                <div class="radio-select">
+                                    <input type="radio" id="amount-1" name="sel-amount">
+                                    <label for="amount-1">$10</label>
+                                </div>
+                                <div class="radio-select">
+                                    <input type="radio" checked="" id="amount-2" name="sel-amount">
+                                    <label for="amount-2">$25</label>
+                                </div>
+                                <div class="radio-select">
+                                    <input type="radio" id="amount-3" name="sel-amount">
+                                    <label for="amount-3">$50</label>
+                                </div>
+                                <div class="radio-select">
+                                    <input type="radio" id="amount-4" name="sel-amount">
+                                    <label for="amount-4">$100</label>
+                                </div>
+                                <div class="radio-select">
+                                    <input type="radio" id="amount-5" name="sel-amount">
+                                    <label for="amount-5">$150</label>
+                                </div>
+                                <div class="radio-select">
+                                    <input type="radio" id="amount-6" name="sel-amount">
+                                    <label for="amount-6">$200</label>
+                                </div>
+                                <div class="radio-select">
+                                    OR
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-5 col-md-8 col-xs-12 padd-top-20">
+                                <input type="text" placeholder="Other Amount" value="" name="other-amount">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-portlet">
+                        <h3>Billing Information</h3>
+                        <div class="row clearfix">
+                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                                <div class="field-label">Card Number <span class="required">*</span></div>
+                                <input type="text" required="" placeholder="Card Number" value="" name="name">
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                                <div class="field-label">Security Code (CVC) <span class="required">*</span></div>
+                                <input type="text" required="" placeholder="Security Code" value="" name="name">
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                                <div class="field-label">Name <span class="required">*</span></div>
+                                <input type="text" required="" placeholder="First Name" value="" name="name">
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                                <div class="field-label">Email <span class="required">*</span></div>
+                                <input type="email" required="" placeholder="Email" value="" name="name">
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                                <div class="field-label">Phone <span class="required">*</span></div>
+                                <input type="text" required="" placeholder="Phone" value="" name="name">
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                                <div class="field-label">Address <span class="required">*</span></div>
+                                <input type="text" required="" placeholder="Address 1" value="" name="name">
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                                <div class="field-label">City <span class="required">*</span></div>
+                                <select>
+                                    <option>City</option>
+                                    <option>City Name</option>
+                                    <option>City Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                                <div class="field-label">Zip / Postal Code <span class="required">*</span></div>
+                                <input type="text" required="" placeholder="Zip Code" value="" name="name">
+                            </div>
+                            <hr>
+                            <div class="text-center">
+                                <button class="thm-btn mt_30 mb_30" type="submit">Submit Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-portlet">
+                        <h3>Online Payment Information</h3>
+                        <div class="payment-option-logo"><img alt="" src="{% static 'img/resources/inner-header-bg.jpg' %}"
+                                                              class="img-responsive"></div>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section> -->
+
+{% endblock %}

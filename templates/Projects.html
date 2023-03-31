@@ -1,0 +1,68 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Projects{% endblock %}
+{% block bodyContent %}
+    <section class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 sec-title colored text-center">
+                    <h2>Projects</h2>
+                    <ul class="breadcumb">
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><span>Projects</span></li>
+                    </ul>
+                    <span class="decor"><span class="inner"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="event-feature sec-padding pb_60" data-bg-color="#fafafa">
+        <div class="container">
+            <div class="row">
+                {% if proData %}
+                    {% for i in  proData %}
+                        <div class="col-sm-6 col-md-4">
+                            <div class="event border-1px mb_30">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="event-thumb">
+                                            <div class="thumb">
+                                                <img style="height: 300px" class="full-width"
+                                                     src="{% static 'Media/Images' %}/{{ i.Photo }}"
+                                                     alt="No Image">
+                                            </div>
+                                            <ul class="event-date">
+                                                <li class="date">{{ i.Date|date:"d" }}</li>
+                                                <li class="month">{{ i.Date|date:"M" }}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="event-content p_20">
+                                            <h4 class="event-title"><a
+                                                    href="{% url 'project details' i.Title|slugify|title i.id %}">{{ i.Title }}</a>
+                                            </h4>
+                                            <ul class="event-held list-inline">
+                                                <li data-text-color="#555"><i
+                                                        class="fa fa-map-marker"></i> {{ i.Location|title }}
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0">{{ i.Description|slice:'100' }}...</p>
+                                            <a class="text-thm"
+                                               href="{% url 'project details' i.Title|slugify|title i.id %}">
+                                                Read More </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <h3 class="text-danger text-center">No Projects Record Found</h3>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
