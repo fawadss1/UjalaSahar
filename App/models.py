@@ -64,7 +64,6 @@ class Gallery(models.Model):
         return self.Image_Title
 
 
-
 class Contact(models.Model):
     Name = models.CharField(max_length=50, blank=False)
     Email = models.EmailField(blank=False)

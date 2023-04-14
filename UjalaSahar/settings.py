@@ -30,8 +30,7 @@ CSRF_TRUSTED_ORIGINS = ['https://ujalasahar.up.railway.app', 'https://theujalasa
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_interface',
-    'colorfield',
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -112,6 +111,28 @@ TIME_ZONE = 'Asia/Karachi'
 USE_I18N = True
 
 USE_TZ = True
+
+JAZZMIN_UI_TWEAKS = {"theme": "superhero"}
+
+JAZZMIN_SETTINGS = {
+    "site_brand": "Ujala Sahar",
+    "site_logo": "img/resources/footer-logo.png",
+    "login_logo": "img/resources/footer-logo.png",
+    "welcome_sign": "Welcome to UjalaSahar Admin",
+    "copyright": "UjalaSahar.Org",
+    "order_with_respect_to": ["App", "App.Project", "App.Event", "App.Volunteer", "App.Gallery", "App.Contact", "Auth"],
+    "custom_js": "js/admin.js",
+    "icons": {
+        "App.Event": "fas fa-calendar-check",
+        "App.Project": "fas fa-cubes",
+        "App.Contact": "fas fa-comment",
+        "App.Volunteer": "fas fa-users",
+        "App.Gallery": "fas fa-images",
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+    },
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
